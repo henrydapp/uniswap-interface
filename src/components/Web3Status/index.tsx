@@ -9,7 +9,7 @@ import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
-import { fortmatic, injected, portis, walletconnect, walletlink } from '../../connectors'
+import { fortmatic, injected, binanceinjected, portis, walletconnect, walletlink } from '../../connectors'
 import { NetworkContextName } from '../../constants'
 import useENSName from '../../hooks/useENSName'
 import { useHasSocks } from '../../hooks/useSocksBalance'
@@ -18,6 +18,7 @@ import { isTransactionRecent, useAllTransactions } from '../../state/transaction
 import { TransactionDetails } from '../../state/transactions/reducer'
 import { shortenAddress } from '../../utils'
 import { ButtonSecondary } from '../Button'
+import BinanceIcon from '../../assets/images/bnb.svg'
 
 import Identicon from '../Identicon'
 import Loader from '../Loader'
@@ -133,6 +134,12 @@ const SOCK = (
 function StatusIcon({ connector }: { connector: AbstractConnector }) {
   if (connector === injected) {
     return <Identicon />
+  } else if (connector === binanceinjected) {
+    return (
+      <IconWrapper size={16}>
+        <img src={BinanceIcon} alt={''} />
+      </IconWrapper>
+    )
   } else if (connector === walletconnect) {
     return (
       <IconWrapper size={16}>

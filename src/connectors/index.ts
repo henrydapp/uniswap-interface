@@ -1,5 +1,6 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { InjectedConnector } from '@web3-react/injected-connector'
+import { BinanceConnector } from '@bscswap/binance-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
@@ -27,7 +28,11 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1, 3, 4, 5, 42]
+  supportedChainIds: [1, 3, 4, 5, 42, 56, 97]
+})
+
+export const binanceinjected = new BinanceConnector({
+  supportedChainIds: [56, 97]
 })
 
 // mainnet only

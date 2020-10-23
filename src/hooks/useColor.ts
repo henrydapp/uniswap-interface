@@ -2,7 +2,7 @@ import { useState, useLayoutEffect } from 'react'
 import { shade } from 'polished'
 import Vibrant from 'node-vibrant'
 import { hex } from 'wcag-contrast'
-import { Token, ChainId } from '@uniswap/sdk'
+import { Token, ChainId } from '@bscex/sdk'
 
 async function getColorFromToken(token: Token): Promise<string | null> {
   if (token.chainId === ChainId.RINKEBY && token.address === '0xc7AD46e0b8a400Bb3C915120d284AafbA8fc4735') {
@@ -29,7 +29,7 @@ async function getColorFromToken(token: Token): Promise<string | null> {
 }
 
 export function useColor(token?: Token) {
-  const [color, setColor] = useState('#2172E5')
+  const [color, setColor] = useState('#F0B90B')
 
   useLayoutEffect(() => {
     let stale = false
@@ -44,7 +44,7 @@ export function useColor(token?: Token) {
 
     return () => {
       stale = true
-      setColor('#2172E5')
+      setColor('#F0B90B')
     }
   }, [token])
 

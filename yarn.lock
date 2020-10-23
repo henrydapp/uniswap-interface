@@ -1124,6 +1124,29 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@bscex/sdk@3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@bscex/sdk/-/sdk-3.0.9.tgz#5edbce10469c105da2e7f75ba14bb8bf8cfbcadc"
+  integrity sha512-uqBW0uYFgX1EWAIQ/ehF28+IzY0AdkY1VT1xmXRmTPE1YN51tF1CTkJOwSXaI20PL7nTsYFKunmgZipWlxUp6Q==
+  dependencies:
+    "@uniswap/v2-core" "^1.0.0"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
+"@bscswap/binance-connector@^6.0.10":
+  version "6.0.10"
+  resolved "https://registry.yarnpkg.com/@bscswap/binance-connector/-/binance-connector-6.0.10.tgz#404144b225971635ad69abef84e359959bb5bb6d"
+  integrity sha512-mhyfLO3xVqBzviz/4ACPCWDgJNEOlQ2FoH3BRmTl0a7V2tRjElAMYvvXHHJTkY7yhQ3inEWIGXWsYuV3/8ABog==
+  dependencies:
+    "@web3-react/abstract-connector" "^6.0.7"
+    "@web3-react/types" "^6.0.7"
+    babel-plugin-transform-async-to-promises "^0.8.15"
+    tiny-warning "^1.0.3"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -3877,6 +3900,11 @@ babel-plugin-transform-async-to-generator@^6.22.0:
     babel-helper-remap-async-to-generator "^6.24.1"
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.22.0"
+
+babel-plugin-transform-async-to-promises@^0.8.15:
+  version "0.8.15"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-async-to-promises/-/babel-plugin-transform-async-to-promises-0.8.15.tgz#13b6d8ef13676b4e3c576d3600b85344bb1ba346"
+  integrity sha512-fDXP68ZqcinZO2WCiimCL9zhGjGXOnn3D33zvbh+yheZ/qOrNVVDDIBtAaM3Faz8TRvQzHiRKsu3hfrBAhEncQ==
 
 babel-plugin-transform-es2015-arrow-functions@^6.22.0:
   version "6.22.0"

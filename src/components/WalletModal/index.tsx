@@ -7,7 +7,7 @@ import ReactGA from 'react-ga'
 import styled from 'styled-components'
 import MetamaskIcon from '../../assets/images/metamask.png'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
-import { fortmatic, injected, portis } from '../../connectors'
+import { fortmatic, injected, binanceinjected, portis } from '../../connectors'
 import { OVERLAY_READY } from '../../connectors/Fortmatic'
 import { SUPPORTED_WALLETS } from '../../constants'
 import usePrevious from '../../hooks/usePrevious'
@@ -19,6 +19,7 @@ import AccountDetails from '../AccountDetails'
 import Modal from '../Modal'
 import Option from './Option'
 import PendingView from './PendingView'
+import BinanceIcon from '../../assets/images/bnb.svg'
 
 const CloseIcon = styled.div`
   position: absolute;
@@ -261,6 +262,28 @@ export default function WalletModal({
         // likewise for generic
         else if (option.name === 'Injected' && isMetamask) {
           return null
+        }
+      }
+
+      // overwrite injected when needed
+      if (option.connector === binanceinjected) {
+        // don't show injected if there's no injected provider
+        if (!(window.web3)) {
+          if (option.name === 'Binance Chain Wallet') {
+            return (
+              <Option
+                id={`connect-${key}`}
+                key={key}
+                color={'#F9A825'}
+                header={'Install Binance Chain Wallet'}
+                subheader={null}
+                link={'https://docs.binance.org/smart-chain/wallet/binance.html'}
+                icon={BinanceIcon}
+              />
+            )
+          } else {
+            return null //dont want to return install twice
+          }
         }
       }
 

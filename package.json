@@ -117,5 +117,9 @@
       "last 1 safari version"
     ]
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@bscex/sdk": "3.0.9",
+    "@bscswap/binance-connector": "^6.0.10"
+  }
 }
